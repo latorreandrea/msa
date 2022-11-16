@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titolo %} Aggiungi {{ prodotto }} {% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row text-center">
+        <div class="col-12">
+            <h2>
+                Stai aggiungendo un {{ prodotto }} al magazzino
+            </h2>
+            {% if avviso %}
+                <h3>
+                    {{ avviso }}
+                </h3>
+            {% endif %}
+        </div>
+        <div class="col-12">
+            <form action="" method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="form-group">
+                    {{ field.errors }} 
+                    {{ field.label_tag }}
+                    <div class="form-control-lg">
+                        {{ field }}
+                    </div>                
+                </div>
+                {% endfor %} 
+                <input type="submit" class="btn btn-danger" value="AGGIUNGI">
+                <button type="button" class="btn btn-outline-info">Assegna {{ prodotto }}</button>
+                <br>
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+{% endblock %}

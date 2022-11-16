@@ -1,0 +1,79 @@
+/* --------------------------- Font Base */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* --------------------------- Regole Generali */
+body {
+    /*background-image: url(/media/bg.jpg);*/    
+    background-position-x: center;
+    background-size: initial;
+    background-attachment: fixed;    
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+a,
+li,
+span {
+    text-decoration: none;  
+    color: black;  
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+
+
+/* --------------------------- nav bar */
+nav {
+    background-color: #dfda38 ;
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: xx-large;
+}
+
+.nav-item {
+    font-weight: 600;        
+}
+
+.nav-item:hover {
+    font-weight: 600;
+    transition: color .3s ease-in-out, border-bottom .3s ease-in-out;    
+    border-bottom: 3px solid #AFAC99;
+    margin-bottom: -3px;
+}
+
+.active {
+    font-weight: 600;    
+    border-bottom: 3px solid #AFAC99;
+    margin-bottom: -3px;
+}
+/* ----------- maincontent */
+
+#maincontent {
+    margin-top: 5rem;   
+    min-height: 100%;
+}
+
+/* ----------- footer */
+
+footer {
+    background-color: #AFAC99;    
+    text-align: center;
+    padding-top: 10px;
+    border-top: #AFAC99 solid 5px;
+}
+
+.li-social {
+    display: inline;
+    padding: 0 10px;
+}
+
+

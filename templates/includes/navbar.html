@@ -1,0 +1,31 @@
+{% load static %}
+
+{% url 'home' as home %}
+{% url 'lista_giacenze' as giacenze %}
+
+<div class="row">
+<nav class="navbar navbar-expand-md navbar-light px-5 justify-content-between">
+    <div class="col">
+        <a id="logo" class="navbar-brand {% if request.path == home %} active {%endif%}" href="{{ home }}">        
+            MSA       
+        </a>
+    </div>
+        
+    <div class="col">
+        <div class="collapse navbar-collapse float-end" >
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Consegnati</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == giacenze %} active {%endif%}" href="{{ giacenze }}">Giacenze</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+
+    
+</nav>
+</div>
